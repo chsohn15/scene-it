@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_17_010438) do
+ActiveRecord::Schema.define(version: 2023_05_23_015453) do
+
+  create_table "film_locations", force: :cascade do |t|
+    t.integer "production_id"
+    t.text "scene_description"
+    t.integer "location_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "locations", force: :cascade do |t|
     t.string "name"
     t.string "city"
     t.string "state"
     t.string "country"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "movie_locations", force: :cascade do |t|
-    t.integer "movie_id"
-    t.text "scene_description"
-    t.integer "location_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

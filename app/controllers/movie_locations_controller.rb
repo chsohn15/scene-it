@@ -1,2 +1,0 @@
-class MovieLocationsController < ApplicationController
-end
